@@ -16,16 +16,23 @@
 Os dados mockados foram ajustados para o contexto de autônomos e MEIs, incluindo categorias como despesas operacionais, impostos, investimentos no negócio e metas de reserva financeira. Também foram adicionados campos para datas, valores, categorias e observações.
 
 ---
-
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
 
-Os arquivos CSV e JSON são carregados no início da sessão e armazenados em memória ou consultados diretamente no banco de dados (Firestore), sendo atualizados conforme o usuário interage com o agente.
+```python
+import pandas as pd
+import json
 
-### Como os dados são usados no prompt?
+# Carregamento dos dados
+transacoes = pd.read_csv("data/transacoes.csv")
+historico = pd.read_csv("data/historico_interacoes.csv")
 
-Os dados relevantes do usuário são inseridos dinamicamente no prompt de sistema e nas mensagens do usuário, garantindo que as respostas sejam contextualizadas e personalizadas.
+with open("data/perfil_usuario.json", "r", encoding="utf-8") as f:
+    perfil = json.load(f)
+
+with open("data/metas_financeiras.json", "r", encoding="utf-8") as f:
+    metas = json.load(f)
 
 ---
 
