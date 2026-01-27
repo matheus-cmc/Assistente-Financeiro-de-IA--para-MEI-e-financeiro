@@ -5,7 +5,7 @@
     "risco": "baixo",
     "rentabilidade": "100% da Selic",
     "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "indicado_para": "Reserva de emergência do negócio e iniciantes"
   },
   {
     "nome": "CDB Liquidez Diária",
@@ -13,7 +13,7 @@
     "risco": "baixo",
     "rentabilidade": "102% do CDI",
     "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "indicado_para": "Capital de giro e segurança com rendimento diário"
   },
   {
     "nome": "LCI/LCA",
@@ -21,7 +21,7 @@
     "risco": "baixo",
     "rentabilidade": "95% do CDI",
     "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "indicado_para": "Quem pode deixar o dinheiro parado por 90 dias (isento de IR)"
   },
   {
     "nome": "Fundo Multimercado",
@@ -29,7 +29,7 @@
     "risco": "medio",
     "rentabilidade": "CDI + 2%",
     "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "indicado_para": "Perfil moderado que busca diversificação do patrimônio"
   },
   {
     "nome": "Fundo de Ações",
@@ -37,6 +37,6 @@
     "risco": "alto",
     "rentabilidade": "Variável",
     "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "indicado_para": "Perfil arrojado com foco no crescimento do negócio no longo prazo"
   }
 ]
