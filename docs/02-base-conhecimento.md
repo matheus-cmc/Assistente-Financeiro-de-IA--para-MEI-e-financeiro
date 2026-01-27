@@ -22,18 +22,15 @@ Os dados mockados foram ajustados para o contexto de autônomos e MEIs, incluind
 Existe duas possibilidades, injetar os dados diretamente no prompt(CTRL+C, CTRL+V) ou carregar os arquivos via codigo como no exemplo abaixo:
 
 ```python
-import pandas as pd
 import json
+import pandas as pd
 
-# Carregamento dos dados
-transacoes = pd.read_csv("data/transacoes.csv")
-historico = pd.read_csv("data/historico_interacoes.csv")
+# ===== CARREGAR DADOS =====
+perfil = json.load(open("./data/perfil_investidor.json"))
+transacoes = pd.read_csv("./data/transacoes.csv")
+historico = pd.read_csv("./data/historico_atendimento.csv")
+produtos = json.load(open("./data/produtos_financeiros.json"))
 
-with open("data/perfil_usuario.json", "r", encoding="utf-8") as f:
-    perfil = json.load(f)
-
-with open("data/metas_financeiras.json", "r", encoding="utf-8") as f:
-    metas = json.load(f)
 
 ---
 
