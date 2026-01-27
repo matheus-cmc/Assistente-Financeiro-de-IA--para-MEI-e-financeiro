@@ -2,54 +2,48 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
-
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+| `transacoes.csv` | CSV | Analisar receitas e despesas do usuário |
+| `perfil_usuario.json` | JSON | Personalizar orientações financeiras |
+| `metas_financeiras.json` | JSON | Acompanhar metas e planejamento |
+| `historico_interacoes.csv` | CSV | Manter contexto das conversas |
 
 ---
 
 ## Adaptações nos Dados
 
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-[Sua descrição aqui]
+Os dados mockados foram ajustados para o contexto de autônomos e MEIs, incluindo categorias como despesas operacionais, impostos, investimentos no negócio e metas de reserva financeira. Também foram adicionados campos para datas, valores, categorias e observações.
 
 ---
 
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos CSV e JSON são carregados no início da sessão e armazenados em memória ou consultados diretamente no banco de dados (Firestore), sendo atualizados conforme o usuário interage com o agente.
 
 ### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados relevantes do usuário são inseridos dinamicamente no prompt de sistema e nas mensagens do usuário, garantindo que as respostas sejam contextualizadas e personalizadas.
 
 ---
 
 ## Exemplo de Contexto Montado
 
-> Mostre um exemplo de como os dados são formatados para o agente.
+
 
 ```
 Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+- Nome: Carlos Oliveira
+- Tipo de Perfil: Autônomo (MEI)
+- Objetivo Principal: Organizar finanças e separar contas pessoais das profissionais
+- Saldo atual do negócio: R$ 4.200
 
 Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+- 05/01: Cliente X - Receita - R$ 1.500
+- 07/01: Aluguel de sala - Despesa - R$ 800
+- 10/01: Internet - Despesa - R$ 120
+- 12/01: Reserva financeira - Poupança - R$ 300
+
 ```
