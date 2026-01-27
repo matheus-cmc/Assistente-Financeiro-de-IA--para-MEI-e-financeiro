@@ -19,6 +19,7 @@ Os dados mockados foram ajustados para o contexto de autônomos e MEIs, incluind
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
+Existe duas possibilidades, injetar os dados diretamente no prompt(CTRL+C, CTRL+V) ou carregar os arquivos via codigo como no exemplo abaixo:
 
 ```python
 import pandas as pd
@@ -41,9 +42,13 @@ with open("data/metas_financeiras.json", "r", encoding="utf-8") as f:
 
 
 ```
+
+### Como os dados são usados no prompt?
+
 Dados do Cliente:
 - Nome: Carlos Oliveira
-- Tipo de Perfil: Autônomo (MEI)
+- Profissão: Designer Freelancer (MEI)
+- Perfil Financeiro: Conservador
 - Objetivo Principal: Organizar finanças e separar contas pessoais das profissionais
 - Saldo atual do negócio: R$ 4.200
 
@@ -52,5 +57,13 @@ Dados do Cliente:
 - 07/01: Aluguel de sala - Despesa - R$ 800
 - 10/01: Internet - Despesa - R$ 120
 - 12/01: Reserva financeira - Poupança - R$ 300
+
+Produtos disponíveis para ensino:
+- Tesouro Selic: Renda fixa, baixo risco, ideal para reserva de emergência.
+- CDB Liquidez Diária: Renda fixa, baixo risco, bom para capital de giro.
+- LCI/LCA: Renda fixa, isento de IR, indicado para médio prazo.
+- Fundo Multimercado: Risco médio, indicado para diversificação.
+- Fundo de Ações: Alto risco, indicado para longo prazo.
+
 
 ```
