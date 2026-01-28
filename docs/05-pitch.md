@@ -49,6 +49,6 @@ O diferencial está no uso responsável da inteligência artificial, com foco em
 
 ## Link do Vídeo
 
-> Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
+> Até o momento não tem um video pronto mas mem breve terá.)
 
 [Link do vídeo]
