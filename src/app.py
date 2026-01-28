@@ -2,12 +2,11 @@ import json
 import pandas as pd
 import requests
 import streamlit as st
+
 # ---------- CONFIGURAÇÃO ----------
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODELO = "tinyllama"
-
-
 
 # ===== CARREGAR DADOS =====
 perfil = json.load(open("./data/perfil_investidor.json"))
@@ -48,6 +47,7 @@ REGRAS:
 7. Responda de forma clara, direta e com no máximo 3 parágrafos.
 8. Mantenha sempre um tom respeitoso, educativo e motivador.
 """
+
 # ---------- CHAMAR OLLAMA ----------
 
 def perguntar(msg):
@@ -79,23 +79,20 @@ Pergunta: {msg}
         return f"Erro ao conectar com o Ollama: {e}"
 
 
-
 # ========== INTERFACE ==========
 
-# ========== INTERFACE ==========
-
-st.title("🎓 MEI, Seu Educador Finaceiro")
+st.title("💼 MEI Financeiro — Seu Assistente de Finanças")
 
 # Inicializa histórico
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "Olá! 👋 Sou o Edu, seu educador financeiro. Como posso te ajudar hoje?"
+            "content": "Olá! 👋 Sou o MEI Financeiro, seu assistente para organização e educação financeira. Como posso te ajudar hoje?"
         }
     ]
 
-# Renderiza histórico (ESSA PARTE FAZ A JANELA APARECER)
+# Renderiza histórico
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
