@@ -84,7 +84,7 @@ Pergunta: {msg}
 
 # ========== INTERFACE ==========
 
-st.title("🎓 Edu, Seu Educador Financeiro")
+st.title("🎓 MEI, Seu Educador Finaceiro")
 
 # Inicializa histórico
 if "messages" not in st.session_state:
