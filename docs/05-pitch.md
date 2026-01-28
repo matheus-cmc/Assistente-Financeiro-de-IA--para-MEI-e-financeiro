@@ -49,6 +49,6 @@ O diferencial está no uso responsável da inteligência artificial, com foco em
 
 ## Link do Vídeo
 
-> Até o momento não tem um video pronto mas mem breve terá.)
+> um vídeo muito simples, link abaixo. depois um video melhor será enviado !
 
-[Link do vídeo]
+[Link do vídeo]](https://www.youtube.com/watch?v=wgfJzado7rA)
